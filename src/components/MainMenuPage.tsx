@@ -100,7 +100,7 @@ export default function MainMenuPage({ onMenuSelect }: MainMenuPageProps) {
       {/* Header */}
       <div className="text-center mb-12">
         <img
-          src="dist/motqen.png"
+          src="/dist/motqen.png"
           alt="logo"
           className="mx-auto w-[35rem] h-[13rem]"
         />
