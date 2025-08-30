@@ -88,11 +88,7 @@ export default function MainMenuPage({ onMenuSelect }: MainMenuPageProps) {
                   تواصل معنا
                 </button>
               </li>
-              <li>
-                <button className="w-full text-right px-4 py-2 hover:bg-blue-50 text-blue-700 font-medium">
-                  عن الفريق
-                </button>
-              </li>
+              
             </ul>
           </div>
         )}
