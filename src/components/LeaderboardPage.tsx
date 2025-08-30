@@ -23,7 +23,7 @@ const competitions = [
     description: 'تحدى زملاءك في حل المسائل الرياضية',
     participants: 156,
     timeLeft: '3 أيام',
-    prize: '500 نقطة',
+    prize: '1000 جنية',
     color: 'bg-gradient-to-r from-green-400 to-green-600'
   },
   {
@@ -32,7 +32,7 @@ const competitions = [
     description: 'اختبر مهاراتك في القواعد والمفردات',
     participants: 203,
     timeLeft: '5 أيام',
-    prize: '750 نقطة',
+    prize: '750 جنية',
     color: 'bg-gradient-to-r from-blue-400 to-blue-600'
   },
   {
@@ -41,7 +41,7 @@ const competitions = [
     description: 'استكشف عالم العلوم والاكتشافات',
     participants: 89,
     timeLeft: '12 يوم',
-    prize: '1000 نقطة',
+    prize: '500 جنية',
     color: 'bg-gradient-to-r from-purple-400 to-purple-600'
   }
 ];
@@ -176,7 +176,7 @@ export default function LeaderboardPage({ onBack }: LeaderboardPageProps) {
                       </div>
                       <div className="flex items-center gap-1">
                         <Trophy className="w-4 h-4" />
-                        <span>الجائزة: {competition.prize}</span>
+                        <span> الجائزة النقدية: {competition.prize}</span>
                       </div>
                     </div>
                   </div>

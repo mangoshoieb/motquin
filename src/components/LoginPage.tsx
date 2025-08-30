@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { User, Lock, LogIn } from 'lucide-react';
+import React, { useState } from "react";
+import { User, Lock, LogIn } from "lucide-react";
 
 interface LoginPageProps {
   onLogin: () => void;
 }
 
 export default function LoginPage({ onLogin }: LoginPageProps) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,9 +21,11 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
       <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md transform transition-all duration-300 hover:shadow-3xl">
         {/* Logo */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-blue-600 mb-2" style={{ fontFamily: 'serif' }}>
-            متقن
-          </h1>
+          <img
+            src="/motqen.png"
+            alt="logo"
+            className="mx-auto w-[22rem] h-[13rem]"
+          />
           <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto"></div>
         </div>
 

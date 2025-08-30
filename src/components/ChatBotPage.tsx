@@ -148,7 +148,7 @@ export default function ChatBotPage({ onBack }: ChatBotPageProps) {
   const [messagess] = useState<Messagee[]>([
     {
       id: 1,
-      text: "In this sentence before we explain verb, subject, and object: 'I need Motqen everyday.' Can you tell me which one is the verb?",
+      text: "before we explain Can you tell me where is the  verb, subject, and object In this sentence : 'I need Motqen everyday.' ",
       sender: "user",
       timestamp: new Date(),
     },
