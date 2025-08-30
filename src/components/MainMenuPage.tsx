@@ -102,7 +102,7 @@ export default function MainMenuPage({ onMenuSelect }: MainMenuPageProps) {
         <img
           src="/motqen.png"
           alt="logo"
-          className="mx-auto w-[35rem] h-[13rem]"
+          className="mx-auto w-[22rem] h-[13rem]"
         />
         <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto mt-4"></div>
       </div>
