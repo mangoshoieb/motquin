@@ -148,25 +148,25 @@ export default function ChatBotPage({ onBack }: ChatBotPageProps) {
   const [messagess] = useState<Messagee[]>([
     {
       id: 1,
-      text: "أهلاً يا أستاذ، عندي مشكلة في قاعدة المضارع البسيط.",
+      text: "In this sentence before we explain verb, subject, and object: 'I need Motqen everyday.' Can you tell me which one is the verb?",
       sender: "user",
       timestamp: new Date(),
     },
     {
       id: 2,
-      text: "مرحباً 👋، لا تقلق. المضارع البسيط نستخدمه للتعبير عن العادات أو الحقائق. هل تريد مثال؟",
+      text: "The verb is 'need', the subject is 'I', and the object is 'Motqen'.",
       sender: "bot",
       timestamp: new Date(),
     },
     {
       id: 3,
-      text: "نعم، من فضلك.",
+      text: "Exactly 👌. This tense is called the Present Simple, and it has several uses. Another tense is the Present Continuous, which adds the idea of an action happening right now, like: 'I am studying now.' Let’s explain its structure. Can you tell me who the subject is in the last sentence?",
       sender: "user",
       timestamp: new Date(),
     },
     {
       id: 4,
-      text: "تمام 👍. مثلاً: She plays tennis every Sunday. لاحظ أن الفعل أخذ (s) لأنه مع الضمير She.",
+      text: "Great 👍. For example: 'She plays tennis every Sunday.' Notice that the verb takes an 's' because the subject is 'She'.",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -643,7 +643,7 @@ export default function ChatBotPage({ onBack }: ChatBotPageProps) {
             {messagess.map((msg) => (
               <div
                 key={msg.id}
-                className={`flex ${
+                className={`flex mb-3 ${
                   msg.sender === "user" ? "justify-end" : "justify-start"
                 }`}
               >

@@ -174,60 +174,46 @@ export default function VocabularyPage({
       </div>
 
       {/* Quiz Card */}
-      <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-xl flex gap-6 items-start">
-        {/* Left side: Image */}
-        <div className="w-1/3">
-          <img
-            src={q.image}
-            alt="question"
-            className="w-full h-48 object-cover rounded-lg shadow"
-          />
+      <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-xl">
+        <h2 className="text-xl font-bold mb-4">
+          السؤال {current + 1} من {questions.length}
+        </h2>
+        <p className="mb-4">{q.question}</p>
+        <img
+          src={q.image}
+          alt="question"
+          className="w-full h-48 object-cover mb-4 rounded"
+        />
+
+        <div className="space-y-2">
+          {q.options.map((opt) => (
+            <button
+              key={opt}
+              onClick={() => handleSelect(opt)}
+              className={`w-full p-3 rounded-lg border 
+              ${
+                selected === opt
+                  ? opt === q.answer
+                    ? "bg-green-200 border-green-500"
+                    : "bg-red-200 border-red-500"
+                  : "bg-gray-100"
+              }
+              hover:bg-blue-300`}
+            >
+              {opt}
+            </button>
+          ))}
         </div>
 
-        {/* Right side: Question + Answers */}
-        <div className="flex-1">
-          <h2 className="text-lg font-bold mb-2 text-gray-700">
-            السؤال {current + 1} من {questions.length}
-          </h2>
-          <p className="mb-4 text-gray-800 font-medium">{q.question}</p>
+        {feedback && <p className="mt-4 text-lg font-semibold">{feedback}</p>}
 
-          {/* Options */}
-          <div className="space-y-3">
-            {q.options.map((opt) => (
-              <button
-                key={opt}
-                onClick={() => handleSelect(opt)}
-                className={`w-full text-right px-4 py-3 rounded-lg border transition
-            ${
-              selected === opt
-                ? opt === q.answer
-                  ? "bg-green-200 border-green-500"
-                  : "bg-red-200 border-red-500"
-                : "bg-gray-50 border-gray-300"
-            }
-            hover:bg-blue-100`}
-              >
-                {opt}
-              </button>
-            ))}
-          </div>
-
-          {/* Feedback */}
-          {feedback && (
-            <p className="mt-4 text-md font-semibold text-gray-700">
-              {feedback}
-            </p>
-          )}
-
-          {/* Next Button */}
-          <button
-            onClick={handleNext}
-            disabled={!selected}
-            className="mt-6 px-6 py-2 bg-green-600 text-white rounded-lg disabled:opacity-50 hover:bg-green-700 transition"
-          >
-            التالي
-          </button>
-        </div>
+        <button
+          onClick={handleNext}
+          disabled={!selected}
+          className="mt-6 px-4 py-2 bg-green-600 text-white rounded-lg disabled:opacity-50"
+        >
+          التالي
+        </button>
       </div>
 
       {/* Study Tips */}
